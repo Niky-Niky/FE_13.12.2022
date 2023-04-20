@@ -1,4 +1,3 @@
-// import products from './data/products.js';
 const products = [
     {
         name: 'Product 1',
@@ -30,12 +29,6 @@ const products = [
     }
 ];
 
-//  <article class="product">
-//     <h2 class="product__name">Name</h2>
-//     <p class="product__description">Description</p>
-//     <p class="product__price">Price: 500 credits</p>
-// </article>  
-
 const createArticle = function ({name, description, price}){
 const articleEl = document.createElement('article');
 articleEl.classList.add = 'product';
@@ -63,3 +56,20 @@ console.log(elements);
 
 const containerEl = document.querySelector('.js-products');
 containerEl.append(...elements)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
