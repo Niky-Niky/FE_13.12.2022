@@ -36,4 +36,30 @@ const products = [
 //     <p class="product__price">Price: 500 credits</p>
 // </article>  
 
+const createArticle = function ({name, description, price}){
 const articleEl = document.createElement('article');
+articleEl.classList.add = 'product';
+
+const productName = document.createElement('h2');
+productName.classList.add = 'product__name';
+productName.textContent = name;
+
+const productDescrEl = document.createElement('p');
+productDescrEl.classList.add = 'product__descr';
+productDescrEl.textContent = description;
+
+const productPrice = document.createElement('p');
+productPrice.classList.add = 'product__price';
+productPrice.textContent = `The price is ${price} credits`;
+
+articleEl.append(productName, productDescrEl, productPrice);
+
+return articleEl;
+}
+
+const elements = products.map(createArticle);
+
+console.log(elements);
+
+const containerEl = document.querySelector('.js-products');
+containerEl.append(...elements)
